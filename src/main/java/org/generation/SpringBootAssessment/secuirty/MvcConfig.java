@@ -17,11 +17,4 @@ public class MvcConfig  implements WebMvcConfigurer
         registry.addViewController("/index").setViewName("index");
         registry.addViewController("/addlist").setViewName("addList");
     }
-
-    @Override
-    public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/static")
-                .addResourceLocations("classpath:/static/")
-                .setCachePeriod(0);
-    }
 }
