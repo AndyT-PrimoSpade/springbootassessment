@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- <link rel="stylesheet" href="../static/css/bootstrap.min.css" /> -->
+    <link rel="stylesheet" href="css/navbar.css" />
+    <title>SpringBoot Assessment</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-todoList active">
+                    <a class="nav-link" th:href="@{index}">View ToDo List</a>
+                </li>
+                <li class="nav-todoList">
+                    <a class="nav-link" th:href="@{addlist}">Add ToDo List</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <form id="newItemForm" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="titleInput" class="form-label">Title</label>
+                <input type="title" class="form-control" id="titleInput" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                <label for="descriptionInput" class="form-label">Description</label>
+                <input type="description" class="form-control" id="descriptionInput">
+            </div>
+            <div class="mb-3">
+                <label for="targetDateInput" class="form-label">Target Date</label>
+                <input type="text" placeholder="Select Date in YYYY/MM/DD Format" onfocus="(this.type='date')" id="targetDateInput" class="form-control">
+                <i class="fas fa-calendar input-prefix" tabindex=0></i>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <!-- <script src="js/bootstrap.bundle.min.js"></script> -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/todoController.js"></script>
+    <script src="js/todoForm.js"></script>
+</body>
+
+</html>

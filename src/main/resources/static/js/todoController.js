@@ -21,7 +21,8 @@ class ListsController {
         formData.append('description', description);
         formData.append('targetDate', targetDate);
 
-        fetch('http://localhost:8080/list/add', {
+//        fetch('http://localhost:8080/list/add', {
+        fetch('https://springbootassessment.herokuapp.com/list/add', {
             method: 'POST',
             body: formData
         })
@@ -54,7 +55,8 @@ class ListsController {
         let listController = this;
         listController._items = [];
 
-        fetch('http://localhost:8080/list/all')
+//        fetch('http://localhost:8080/list/all')
+        fetch('https://springbootassessment.herokuapp.com/list/all')
             .then((resp) => resp.json())
             .then(function (data) {
                 console.log("2. receive data")
