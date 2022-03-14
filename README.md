@@ -1,6 +1,6 @@
 # Spring Boot Assessment
 
-## ** Deployment Live Site - https://springbootassessment.herokuapp.com
+## Deployment Live Site - https://springbootassessment.herokuapp.com
 
 ## Reflection
 
